@@ -75,6 +75,14 @@
   <% } %>
 </article>
 
+<% if (post.auto_spacing && !index) { %>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.js"></script>
+  <script>
+      pangu.spacingElementByClassName('article-main');
+  </script>
+
+<% } %>
+
 <% if (!index && theme.comment.valine && theme.comment.valine.enable) { %>
   <% 
     let valineConfig = theme.comment.valine;
