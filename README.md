@@ -23,6 +23,10 @@ A theme for <a href="https://hexo.io/">Hexo</a>, modified from <a href="https://
 </a>
 </div>
 
+# Improvements:
+
+**[Docs](docs.md)**
+
 # Preview
 
 **[💻Live Demo](https://saicaca.github.io/vivia-preview/)**
