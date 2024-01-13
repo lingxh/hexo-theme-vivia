@@ -6,7 +6,14 @@
     <% if (theme.copyright){ %>
       <%- render(theme.copyright, 'pug'); %>
     <% } %>
-    &copy; <%= date(new Date(), 'YYYY') %> <%= theme.author || config.author || config.title %><br>
+    &copy; <%= date(new Date(), 'YYYY') %> <%= theme.author || config.author || config.title %>
+    <% if (theme.moe_icp.enable) { %>
+      <div class="moe-icp">
+        <img src="https://icp.gov.moe/images/ico64.png" alt="">
+        <a href="https://icp.gov.moe/?keyword=<%= theme.moe_icp.number %>">萌ICP备<%= theme.moe_icp.number %>号</a>
+      </div>
+    <% } %>
+    <br>
     <%= __('powered_by') %> <a href="https://hexo.io/" target="_blank">Hexo</a> & Theme <a href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a>
   </div>
 </footer>
