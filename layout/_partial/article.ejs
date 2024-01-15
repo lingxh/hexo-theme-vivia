@@ -83,6 +83,15 @@
 
 <% } %>
 
+<script>
+  document.querySelectorAll(".article-main .task-list-item").forEach((li) => {
+    if (li.querySelector("input")){
+      li.style.setProperty("list-style", "none");
+      li.parentNode.style.setProperty("margin-left", "5px");
+    }
+  })
+</script>
+
 <% if (!index && theme.comment.valine && theme.comment.valine.enable) { %>
   <% 
     let valineConfig = theme.comment.valine;
