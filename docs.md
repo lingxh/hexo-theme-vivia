@@ -54,4 +54,7 @@ cover: 文章封面图片链接
 ```bash
 # Clone the theme into the /themes/vivia directory
 git clone https://github.com/lingxh/hexo-theme-vivia.git themes/vivia
+
+# Install the required dependencies
+npm install colorjs.io stylus hexo-symbols-count-time
 ```
