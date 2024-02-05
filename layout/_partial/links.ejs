@@ -20,7 +20,7 @@
         width: calc(50% - .75rem);
         text-decoration: none;
         border-radius: 12px;
-        background-color: aliceblue;
+        background-color: #2e3d4f;
         transition: all 0.4s;
         justify-content: space-around;
         column-gap: 1.5rem;
@@ -84,7 +84,6 @@
         <%- partial('post/tag') %>
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
-        <p>一些朋友的网站，欢迎交换友链。</p>
         <div class="links">
             <% post.links.forEach((li) => { %>
                 <% li = li.link %>
@@ -97,15 +96,6 @@
                 </a>
             <% }) %>
         </div>
-        <blockquote>
-            <p>需要交换友链请在评论区写上：</p>
-            <ul>
-            <li>网站名称</li>
-            <li>网站地址</li>
-            <li>网站图标（提供url，必须为https）</li>
-            <li>网站描述</li>
-            </ul>
-        </blockquote>
         <% if (post.excerpt && index){ %>
             <%- post.excerpt %>
           <% } else if (is_home() && !post.excerpt && theme.home.style != 'detail') { %>
