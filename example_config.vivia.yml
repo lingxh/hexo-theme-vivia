@@ -82,5 +82,9 @@ google_analytics: false #UA-xxxxxx
 baidu_analytics: false # ddxxxxxxxxxxxxxxxxx In the https://hm.baidu.com/hm.js? Afterwards
 
 moe_icp: 
-  enable: false
+  enable: false            # Whether to enable the icp.gov.moe logo
   number: 
+
+expired:
+  enable: false            # Whether to enable article obsolescence prompt (global)
+  day: 1
