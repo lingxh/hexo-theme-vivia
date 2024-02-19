@@ -85,6 +85,5 @@ moe_icp:
   enable: false            # Whether to enable the icp.gov.moe logo
   number: 
 
-expired:
-  enable: false            # Whether to enable article obsolescence prompt (global)
-  day: 1
+expired: 0                 # The article displays a warning after a period of time (global)
+auto_spacing: true         # Automatically add spaces between Chinese and English (global)

@@ -85,6 +85,5 @@ moe_icp:
   enable: false            # 是否启用萌备（icp.gov.moe）徽标
   number: 
 
-expired:
-  enable: false            # 是否启用文章过时提示（全局）
-  day: 1
+expired: 0                 # 文章过期提示时间（全局）
+auto_spacing: true         # 自动在中英文间添加空格（全局）

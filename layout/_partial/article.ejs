@@ -30,17 +30,13 @@
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
 
-        <% if (!index && (theme.expired.enable || post.expired)) { %>
+        <% if (!index && (theme.expired || post.expired)) { %>
           <%
-          let expired = 9999999;
-          if (post.expired) {
-            expired = post.expired;
-          }else{
-            expired = theme.expired.day;
-          } 
+          let expired = 0;
+          post.expired ? expired = post.expired : expired = theme.expired;
           let today = Math.floor(((new Date().getTime()) - (new Date(post.date).getTime())) / (1000 * 60 * 60 * 24));
           %>
-          <% if(today >= expired && post.expired != -1) { %>
+          <% if(today >= expired) { %>
           <blockquote style="background-color: rgba(255,145,0,0.1);border-left:5px solid #ff9100;">
             <p>此文章距发布之日起已过去 <span style="font-weight:700"><%= today %></span> 天，其中某些内容可能已经过时失效</p>
           </blockquote>
@@ -93,7 +89,7 @@
   <% } %>
 </article>
 
-<% if (post.auto_spacing && !index) { %>
+<% if ((post.auto_spacing || theme.auto_spacing) && !index) { %>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.js"></script>
   <script>
       pangu.spacingElementByClassName('article-main');

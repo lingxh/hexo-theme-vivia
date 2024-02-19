@@ -32,6 +32,13 @@ links:
 ```
 
 ### 自动插入空格
+全局设置：  
+在 `_config.vivia.yml` 中，修改以下配置
+```yaml
+auto_spacing: true
+```
+
+文章单独配置：   
 在文章顶部的 front-matter 中，增加以下配置
 ```yaml
 auto_spacing: true
@@ -57,9 +64,7 @@ cover: 文章封面图片链接
 全局设置：  
 在 `_config.vivia.yml` 中，修改以下配置
 ```yaml
-expired:
-  enable: true
-  day: 多少天后过期
+expired: 多少天后过期
 ```
 文章单独配置：  
 在文章顶部的 front-matter 中，增加以下配置
@@ -68,7 +73,7 @@ expired: 多少天后过期
 ```
 Tips：
 - 文章单独配置不受全局功能开关影响
-- expired为-1时即为永不过期
+- expired为0时即为永不过期
 
 ## 安装
 ```bash
