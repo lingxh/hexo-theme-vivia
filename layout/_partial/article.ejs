@@ -29,7 +29,7 @@
         <%- partial('post/tag') %>
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
-        
+
         <% if (!index && (theme.expired.enable || post.expired)) { %>
           <%
           let expired = 9999999;
@@ -40,7 +40,7 @@
           } 
           let today = Math.floor(((new Date().getTime()) - (new Date(post.date).getTime())) / (1000 * 60 * 60 * 24));
           %>
-          <% if(today >= expired) { %>
+          <% if(today >= expired && post.expired != -1) { %>
           <blockquote style="background-color: rgba(255,145,0,0.1);border-left:5px solid #ff9100;">
             <p>此文章距发布之日起已过去 <span style="font-weight:700"><%= today %></span> 天，其中某些内容可能已经过时失效</p>
           </blockquote>

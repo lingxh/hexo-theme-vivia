@@ -10,6 +10,7 @@
 - 增加萌备支持
 - 美化滚动条
 - 增加文章封面配置项
+- 增加文章到期提示
 
 
 ## 使用方法
@@ -37,7 +38,7 @@ auto_spacing: true
 ```
 
 ### 萌备
-在 `_config.vivia.yml` 中，增加以下配置
+在 `_config.vivia.yml` 中，修改以下配置
 ```yaml
 moe_icp:
   enable: true
@@ -49,6 +50,25 @@ moe_icp:
 ```yaml
 cover: 文章封面图片链接
 ```
+
+### 文章到期提示
+> 作用为在你文章上面显示一个"此文章距发布之日起已过去 n 天，其中某些内容可能已经过时失效"
+
+全局设置：  
+在 `_config.vivia.yml` 中，修改以下配置
+```yaml
+expired:
+  enable: true
+  day: 多少天后过期
+```
+文章单独配置：  
+在文章顶部的 front-matter 中，增加以下配置
+```yaml
+expired: 多少天后过期
+```
+Tips：
+- 文章单独配置不受全局功能开关影响
+- expired为-1时即为永不过期
 
 ## 安装
 ```bash
