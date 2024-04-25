@@ -1,5 +1,14 @@
 # 改进文档
 
+## 安装
+```bash
+# Clone the theme into the /themes/vivia directory
+git clone https://github.com/lingxh/hexo-theme-vivia.git themes/vivia
+
+# Install the required dependencies
+npm install colorjs.io stylus hexo-symbols-count-time
+```
+
 ## 改进内容
 
 - 修复手机端文章标题过长导致的排版问题
@@ -75,11 +84,14 @@ Tips：
 - 文章单独配置不受全局功能开关影响
 - expired为0时即为永不过期
 
-## 安装
-```bash
-# Clone the theme into the /themes/vivia directory
-git clone https://github.com/lingxh/hexo-theme-vivia.git themes/vivia
-
-# Install the required dependencies
-npm install colorjs.io stylus hexo-symbols-count-time
+### 文章标题图标
+在你的文章里的h2-h6前面添加一个图标
+在 `_config.vivia.yml` 中，修改以下配置
+```yaml
+title_icon:                
+  h2: ri-hashtag
+  h3: ri-corner-down-right-line
+  h4:
+  h5:
+  h6:
 ```
