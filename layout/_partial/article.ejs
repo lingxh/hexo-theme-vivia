@@ -121,11 +121,11 @@
   <% if(theme.title_icon) { %>
     <script>
     <% for (const it in theme.title_icon) { %>
-      <% if (theme.title_icon[it].length) {%>
+       <% if (theme.title_icon[it]) {%>
         document.querySelectorAll(".article-entry > <%= it %> > a").forEach((li) => {
             li.innerHTML = '<i class=<%= theme.title_icon[it] %>></i>'
         })
-      <% } %>
+       <% } %>
     <% } %>
     </script>
   <% } %>
