@@ -115,6 +115,9 @@
       li.parentNode.style.setProperty("margin-left", "5px");
     }
   })
+  document.querySelectorAll(".article-entry > h2 > a").forEach((li) => {
+    li.innerHTML = '<i class="ri-hashtag"></i>'
+  })
 </script>
 
 <% if (!index && theme.comment.valine && theme.comment.valine.enable) { %>
