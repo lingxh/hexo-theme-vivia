@@ -87,3 +87,10 @@ moe_icp:
 
 expired: 0                 # The article displays a warning after a period of time (global)
 auto_spacing: true         # Automatically add spaces between Chinese and English (global)
+
+title_icon:                # Configure the icon to the left of the title in the article. If left blank, it will not be displayed.
+  h2: ri-hashtag
+  h3: ri-corner-down-right-line
+  h4:
+  h5:
+  h6:

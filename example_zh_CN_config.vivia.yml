@@ -87,3 +87,10 @@ moe_icp:
 
 expired: 0                 # 文章过期提示时间（全局）
 auto_spacing: true         # 自动在中英文间添加空格（全局）
+
+title_icon:                # 配置文章中标题左侧图标，留空则为不显示
+  h2: ri-hashtag
+  h3: ri-corner-down-right-line
+  h4:
+  h5:
+  h6:
