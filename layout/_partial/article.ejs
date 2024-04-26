@@ -101,7 +101,6 @@
 </article>
 
 <% if ((post.auto_spacing || theme.auto_spacing) && !index) { %>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.js"></script>
   <script>
       pangu.spacingElementByClassName('article-main');
   </script>
@@ -138,7 +137,6 @@
     let valineConfig = theme.comment.valine;
     valineConfig.el = '#vcomments';
   %>
-  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   <div id="comment-card" class="comment-card">
     <div class="main-title-bar">
       <div class="main-title-dot"></div>
@@ -152,7 +150,6 @@
 <% } %>
 
 <% if (!index && theme.comment.twikoo && theme.comment.twikoo.enable) { %>
-  <script src="https://cdn.staticfile.org/twikoo/1.6.26/twikoo.all.min.js"></script>
   <div id="comment-card" class="comment-card">
     <div class="main-title-bar">
       <div class="main-title-dot"></div>

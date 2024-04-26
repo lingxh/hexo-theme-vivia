@@ -1,0 +1,23 @@
+.trans-in
+  animation: .25s animation-in
+  animation-fill-mode: forwards
+
+.trans-out
+  animation: .25s animation-out
+  animation-fill-mode: forwards
+
+@keyframes animation-in
+  0%
+    transform: translateY(2rem)
+    opacity: 0
+  100%
+    transform: translateY(0)
+    opacity: 1
+
+@keyframes animation-out
+  0%
+    transform: translateY(0)
+    opacity: 1
+  100%
+    transform: translateY(2rem)
+    opacity: 0

@@ -4,7 +4,7 @@
   //   bannerUrl = url_for(page.photos[0]);
   // }
 %>
-<div id="banner" class="<% if (is_home()) { %> is_home <% } %>">
+<div id="banner" class="<% if (!theme.ajax) { if (is_home()) { %> is_home <% } } %>">
   <img src="<%- url_for(bannerUrl) %>" itemprop="image">
   <div id="banner-dim"></div>
 </div>
