@@ -30,7 +30,7 @@
     </div>
   </nav>
 </navbar>
-<div id="nav-dropdown" class="hidden">
+<div id="nav-dropdown" style="height: 0px;">
   <div id="dropdown-link-list">
     <% for (var i in theme.menu){ %>
       <a class="nav-dropdown-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
@@ -43,7 +43,13 @@
 <script>
   let dropdownBtn = document.getElementById("nav-menu-btn");
   let dropdownEle = document.getElementById("nav-dropdown");
-  dropdownBtn.onclick = function() {
-    dropdownEle.classList.toggle("hidden");
+  let onclick_func = () => {
+    dropdownEle.style.height == '0px' ? dropdownEle.style.height = document.getElementById("dropdown-link-list").clientHeight + 'px' : dropdownEle.style.height = '0';
   }
+  dropdownBtn.onclick = onclick_func;
+  <% if (theme.ajax) {%> 
+    document.querySelectorAll("#dropdown-link-list > a").forEach((nav) => {
+      nav.onclick = onclick_func;
+    })
+  <% } %>
 </script>

@@ -1,3 +1,4 @@
 <div class="<%= class_name %>">
-  <time class="dt-published" datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, date_format) %></time>
+  <div class="link-btn icon"><i class="ri-calendar-line" style="font-size: 1.25rem;"></i></div>
+  <time class="dt-published" datetime="<%= date_xml(post.date) %>" itemprop="datePublished" style="display: flex; align-items: center; font-weight: 600;"><%= date(post.date, date_format) %></time>
 </div>

@@ -16,7 +16,17 @@
 <%  %>
 <html theme="dark" showBanner="true" hasBanner="<%- hasBanner %>" > 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.0/remixicon.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400..900&display=swap" rel="stylesheet">
 <style>::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-track-piece{border-radius:6px;background:rgba(0,0,0,.1)}::-webkit-scrollbar-thumb{border-radius:6px;background:#096dd9}::-webkit-scrollbar-thumb:active{background:#0a7bf4}</style>
+<% if (theme.comment.valine && theme.comment.valine.enable) { %>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<% } %>
+<% if (theme.comment.twikoo && theme.comment.twikoo.enable) { %>
+  <script src="https://cdn.staticfile.org/twikoo/1.6.26/twikoo.all.min.js"></script>
+<% } %>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.js"></script>
 <script src="<%- url_for("/js/color.global.min.js") %>" ></script>
 <script src="<%- url_for("/js/load-settings.js") %>" ></script>
 <%- partial('_partial/head') %>
@@ -34,7 +44,7 @@
     <div id="sidebar-wrapper">
       <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
     </div>
-    <div id="content-body">
+    <div id="content-body" <% if(theme.ajax){%> class="trans-in" <% } %> >
       <%- body %>
     </div>
     <div id="footer-wrapper">
@@ -42,6 +52,7 @@
     </div>
     <%- partial('_partial/back-to-top') %>
   </div>
+  <% if (theme.ajax) {%><script src="/js/ajax.js" ></script><% } %>
   <script src="<%- url_for("/js/light-dark-switch.js") %>"></script>
 </body>
 </html>
