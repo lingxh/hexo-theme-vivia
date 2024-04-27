@@ -24,16 +24,29 @@
   @extend $block-caption
   float: left
 
+.meta-info-bar-bottom
+  border-bottom: 1px solid #e5e7eb
+  padding-bottom: 16px
+
 .meta-info-bar
   color: var(--article-meta)
   font-size: 16px
   font-weight: medium
   text-decoration: none
   display: flex
+  flex-wrap: wrap
+  gap: 24px;
   align-items: center
+  margin-top: 24px
+
   *
     white-space: nowrap
   .meta-info
+    display: flex
+    align-items: center
+    font-weight: 600
+    i
+      font-size: 1.2rem
     transition: color trans-style, outline trans-style, background trans-style
   a
     color: var(--article-meta)
@@ -76,6 +89,16 @@
     margin-bottom: 0
   .meta-info-bar
     margin-bottom: 6px
+  .icon
+    height: 32px;
+    width: 32px;
+    background-color: var(--btn-bg);
+    color: var(--btn-content);
+    display: flex
+    justify-content: center;
+    align-items: center
+    border-radius: 8px
+    margin-right: 6px
 
 .right-panel
   display: flex
@@ -435,3 +458,6 @@
     margin: 0 auto
     max-height: 40vh
     
+@media screen and (max-width: 500px)
+  #wordcount
+    display: none

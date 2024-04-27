@@ -3,7 +3,7 @@
   if (!post.title)
     postTitle = __('untitled');
 %>
-<div class="main-title-bar">
+<div class="main-title-bar <% if(!index) {%>trans-connect-in delay-title<%}%>">
   <div class="main-title-dot"></div>
   <% if (post.link){ %>
     <h1 itemprop="name">
