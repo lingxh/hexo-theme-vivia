@@ -1,4 +1,4 @@
-<% let cover = false %> 
+<% let cover = false; let expired = 0; %> 
 <% if (post.cover && post.cover.length) {
   cover = true;
   cover_url = post.cover;
@@ -34,7 +34,6 @@
 
         <% if (!index && (theme.expired || post.expired)) { %>
           <%
-          let expired = 0;
           typeof post.expired === 'undefined' ? expired = theme.expired : expired = post.expired;
           %>
           <% if (expired) { %>
@@ -42,17 +41,6 @@
             <blockquote style="background-color: rgba(255,145,0,0.1);border-left:5px solid #ff9100;display: none;" id="expired">
               <p>此文章距发布之日起已过去 <span style="font-weight:700" id="expired_day"></span> 天，其中某些内容可能已经过时失效</p>
             </blockquote>
-
-            <script>
-              {
-                let expired_set = document.getElementById("expired_set").innerHTML;
-                let to_day = Math.floor(((new Date().getTime()) - (new Date(document.getElementsByTagName("time")[0].innerHTML).getTime())) / (1000 * 60 * 60 * 24));
-                if (to_day > expired_set) {
-                  document.getElementById("expired_day").innerHTML = to_day;
-                  document.getElementById("expired").style.setProperty("display","flex");
-                }
-            }
-            </script>
           <% } %>
         <% } %>
 
@@ -132,7 +120,18 @@
   <% } %>
 <% } %>
 
-
+<% if (expired) { %>
+  <script>
+    {
+      let expired_set = document.getElementById("expired_set").innerHTML;
+      let to_day = Math.floor(((new Date().getTime()) - (new Date(document.getElementsByTagName("time")[0].innerHTML).getTime())) / (1000 * 60 * 60 * 24));
+      if (to_day > expired_set) {
+        document.getElementById("expired_day").innerHTML = to_day;
+        document.getElementById("expired").style.setProperty("display","flex");
+      }
+    }
+  </script>
+<% } %>
 
 <% if (!index && theme.comment.valine && theme.comment.valine.enable) { %>
   <% 
