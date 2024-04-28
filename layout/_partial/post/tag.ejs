@@ -1,6 +1,7 @@
 <% if (post.tags && post.tags.length){ %>
-  <%- list_tags(post.tags, {
-    show_count: false,
-    class: 'article-tag'
-  }) %>
+  <div id="page-tag">
+    <%  for (let index = 0;index < post.tags.length; index++) { %>
+      <a href="<%- url_for("/tags/" + post.tags.data[index].name)%>"><%= post.tags.data[index].name %></a>
+    <% } %>
+  </div>
 <% } %>

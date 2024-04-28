@@ -15,6 +15,7 @@
   <% } %> 
   <div class="article-inner">
     <div class="article-main">
+      <%- partial('post/tag') %>
       <header class="article-header">
         <%- partial('post/title', {class_name: 'p-name article-title'}) %>
         <div class='meta-info-bar <% if(!index) {%>trans-connect-in delay-tag meta-info-bar-bottom<%}%>'>
@@ -28,7 +29,7 @@
               <%- symbolsCount(post) %> <%- __('words') %> 
             </div>
         </div>
-        <%- partial('post/tag') %>
+        
       </header>
       <div class="e-content article-entry <% if(!index) {%>trans-connect-in delay-text<%}%>" itemprop="articleBody">
 
