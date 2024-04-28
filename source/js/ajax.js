@@ -18,11 +18,11 @@ async function ajax(url) {
         })
         topFunction();  // 返回顶部
 
-        ajax_addlistener(["#content-body h1 a", ".archive-article-link", "#article-nav a", "#page-nav a", ".article-inner a"]);  // 给替换后的html添加事件
+        ajax_addlistener(["#content-body h1 > a", ".archive-article-link", "#article-nav > a", "#page-nav > a", ".meta-info-bar a"]);  // 给替换后的html添加事件
     }, 250)
 }
 
-let selector_list = ["#content-body h1 a", "#main-nav a", ".archive-article-link", "#article-nav a", ".widget-wrap a", "#dropdown-link-list a", "#page-nav a", "#title-nav a", ".article-inner a"];
+let selector_list = ["#content-body h1 > a", "#main-nav > a", ".archive-article-link", "#article-nav > a", ".category-box > a", "#dropdown-link-list > a", "#page-nav > a", "#title-nav > a", ".meta-info-bar a"];
 
 let ajax_addlistener = (selector_list) => {
     for (let index in selector_list) {
