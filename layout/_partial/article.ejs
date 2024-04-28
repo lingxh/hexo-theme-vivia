@@ -15,7 +15,9 @@
   <% } %> 
   <div class="article-inner">
     <div class="article-main">
-      <%- partial('post/tag') %>
+      <% if (!(cover && index)){ %>
+        <%- partial('post/tag') %>
+      <% } %>
       <header class="article-header">
         <%- partial('post/title', {class_name: 'p-name article-title'}) %>
         <div class='meta-info-bar <% if(!index) {%>trans-connect-in delay-tag meta-info-bar-bottom<%}%>'>
