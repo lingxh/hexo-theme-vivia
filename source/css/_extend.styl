@@ -119,7 +119,18 @@ $base-style
       margin-bottom: 0
   ul
     list-style: disc
+    li
+    // 创意源于 https://github.com/saicaca/fuwari
+      padding: 4px
+      &::marker
+        color: var(--primary)
+        font-size: .75rem
   ol
     list-style: decimal
+    li
+    // 创意源于 https://github.com/saicaca/fuwari
+      padding: 4px
+      &::marker
+        color: var(--primary)
   dt
     font-weight: bold
