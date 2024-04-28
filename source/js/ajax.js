@@ -22,7 +22,7 @@ async function ajax(url) {
     }, 250)
 }
 
-let selector_list = ["#content-body h1 > a", "#main-nav > a", ".archive-article-link", "#article-nav > a", ".category-box > a", "#dropdown-link-list > a", "#page-nav > a", "#title-nav > a", ".meta-info-bar a"];
+let selector_list = ["#content-body h1 > a", "#main-nav > a", ".archive-article-link", "#article-nav > a", ".widget a", "#dropdown-link-list > a", "#page-nav > a", "#title-nav > a", ".meta-info-bar a"];
 
 let ajax_addlistener = (selector_list) => {
     for (let index in selector_list) {
