@@ -499,11 +499,17 @@
     color: var(--license-icon-color)
     pointer-events: none;
   .license-title
+    display: flex
+    flex-direction: column
     h4
       margin: 0
       margin-bottom: .5rem
     a
+      width: 100%
       padding-left: 0
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
   .license-contont
     display: flex
     column-gap: 2rem
