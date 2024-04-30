@@ -457,9 +457,100 @@
     object-fit: cover
     margin: 0 auto
     max-height: 40vh
-    
+
+#page-tag
+  position: absolute
+  top: 0
+  right: 0
+  display: flex
+  column-gap: 12px
+  margin-right: 16px
+  a
+    box-sizing: border-box
+    padding: 4px 8px
+    background-color: var(--enter-btn-bg);
+    color: var(--primary)
+    border-radius: 0 0 8px 8px
+    transition: all 0.25s
+    height: 32px
+    display: flex
+    flex-direction: column-reverse
+    &:hover
+      background-color: var(--enter-btn-hover)
+      // color: #fff
+      height: 48px
+
+// 创意源于 https://github.com/saicaca/fuwari
+.license-block
+  background-color: var(--license-block-bg)
+  border-radius: .75rem
+  padding: 1.25rem 1.5rem
+  position: relative
+  overflow: hidden
+  height: 120px
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  margin-bottom: 1.25rem
+  svg
+    position: absolute
+    top: -40px
+    right 1.5rem
+    color: var(--license-icon-color)
+    pointer-events: none;
+  .license-title
+    h4
+      margin: 0
+      margin-bottom: .5rem
+    a
+      padding-left: 0
+  .license-contont
+    display: flex
+    column-gap: 2rem
+    span
+      h6
+        margin: 0
+        margin-bottom: .25rem
+      p
+        margin: 0
+
 @media screen and (max-width: 500px)
   #wordcount
     display: none
   #page-tag
     display: none
+  :root
+    --root-font-size: 15px
+  .license-block
+    .license-title
+      a
+        font-size: .9rem
+    .license-contont
+      column-gap: 1.5rem
+      span
+        h6
+          font-size: .85rem
+        p
+          font-size: .9rem
+
+@media screen and (max-width: 400px)
+  :root
+    --root-font-size: 14px
+  .license-block
+    .license-title
+      a
+        font-size: .85rem
+    .license-contont
+      column-gap: 1.5rem
+      span
+        h6
+          font-size: .75rem
+        p
+          font-size: .85rem
+
+@media screen and (max-width: 370px)
+  .license-block
+    .license-contont
+      span
+        p
+          font-size: .75rem
