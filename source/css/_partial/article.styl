@@ -482,6 +482,7 @@
 
 // 创意源于 https://github.com/saicaca/fuwari
 .license-block
+  z-index: -2
   background-color: var(--license-block-bg)
   border-radius: .75rem
   padding: 1.25rem 1.5rem
@@ -491,13 +492,13 @@
   display: flex
   justify-content: space-between
   flex-direction: column
-  margin-bottom: 1.25rem
+  margin: 1rem 0
   svg
+    z-index: -1
     position: absolute
     top: -40px
     right 1.5rem
     color: var(--license-icon-color)
-    pointer-events: none;
   .license-title
     display: flex
     flex-direction: column

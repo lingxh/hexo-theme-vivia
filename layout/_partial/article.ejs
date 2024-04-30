@@ -59,9 +59,9 @@
           </div>
         <% } else { %>
           <%- post.content %>
-          <% if (theme.cc || post.cc) {%>
-            <% let cc = theme.cc ? theme.cc : post.cc; %>
-            <%- partial('post/license', {cc: cc, title: post.title, permalink: post.permalink, author: theme.author, post_date: post.date}) %>
+          <% if (theme.license || post.license) {%>
+            <% let license = theme.license ? theme.license : post.license; %>
+            <%- partial('post/license', {license: license, title: post.title, permalink: post.permalink, author: theme.author, post_date: post.date}) %>
             <% } %>
         <% } %>
       </div>
