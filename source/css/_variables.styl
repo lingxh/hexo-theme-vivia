@@ -22,7 +22,7 @@ color-pinterest = #cb2027
 color-linkedin = #0077B5
 
 // Fonts
-font-sans = "Roboto", -apple-system, BlinkMacSystemFont,
+font-sans = "Noto Sans SC", -apple-system, BlinkMacSystemFont,
     "Segoe UI", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif
@@ -31,7 +31,7 @@ font-mono = "JetBrains Mono", "Source Code Pro", Consolas, Monaco, Menlo, Consol
 font-icon = FontAwesome
 font-icon-path = "fonts/fontawesome-webfont"
 font-icon-version = "4.7.0"
-font-size = 16px
+font-size = var(--root-font-size)
 line-height = 1.6em
 line-height-title = 1.1em
 
@@ -66,6 +66,7 @@ inner-radius = 8px
 
 // Transitions
 trans-style = 0.15s ease-out
+t1-style = 0.25s ease-out
 
 // Grids
 column-width = 80px
@@ -96,7 +97,7 @@ color-B30 = alpha(black, 0.3)
 color-B10 = alpha(black, 0.1)
 
 :root
-
+  --root-font-size: 16px
   --neut-L90: color-N90
   --neut-L75: color-N75
   --neut-L50: color-N50
@@ -198,6 +199,9 @@ color-B10 = alpha(black, 0.1)
   --display-light-icon: 0
   --display-dark-icon: 1
 
+  --license-block-bg: var(--blockquote-bg)
+  --license-icon-color: var(--page-background)
+
 :root[theme='light']
   --card-background: white
 
@@ -268,3 +272,8 @@ color-B10 = alpha(black, 0.1)
 
   --display-light-icon: 1
   --display-dark-icon: 0
+
+  --license-block-bg: rgba(0,0,0,.03)
+  --license-icon-color: rgba(0,0,0,.075)
+
+

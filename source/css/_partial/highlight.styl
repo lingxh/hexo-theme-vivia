@@ -19,7 +19,7 @@ $code-block
   margin: 16px auto
   overflow: auto
   color: highlight-foreground
-  line-height: font-size * line-height
+  line-height: calc(var(--root-font-size) * 1.6rem)
   ::selection
     background-color: var(--code-block-selection-bg)
 
@@ -67,7 +67,7 @@ $line-numbers
       text-align: right
       padding-right: 20px
     .line
-      height: font-size * line-height
+      height: calc(var(--root-font-size) * 1.6rem)
     .line.marked
       background: highlight-selection
   .gist

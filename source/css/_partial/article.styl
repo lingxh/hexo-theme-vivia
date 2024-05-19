@@ -24,16 +24,29 @@
   @extend $block-caption
   float: left
 
+.meta-info-bar-bottom
+  border-bottom: 1px solid #e5e7eb
+  padding-bottom: 16px
+
 .meta-info-bar
   color: var(--article-meta)
   font-size: 16px
   font-weight: medium
   text-decoration: none
   display: flex
+  flex-wrap: wrap
+  gap: 24px;
   align-items: center
+  margin-top: 24px
+
   *
     white-space: nowrap
   .meta-info
+    display: flex
+    align-items: center
+    font-weight: 600
+    i
+      font-size: 1.2rem
     transition: color trans-style, outline trans-style, background trans-style
   a
     color: var(--article-meta)
@@ -76,6 +89,16 @@
     margin-bottom: 0
   .meta-info-bar
     margin-bottom: 6px
+  .icon
+    height: 32px;
+    width: 32px;
+    background-color: var(--btn-bg);
+    color: var(--btn-content);
+    display: flex
+    justify-content: center;
+    align-items: center
+    border-radius: 8px
+    margin-right: 6px
 
 .right-panel
   display: flex
@@ -434,4 +457,107 @@
     object-fit: cover
     margin: 0 auto
     max-height: 40vh
-    
+
+#page-tag
+  position: absolute
+  top: 0
+  right: 0
+  display: flex
+  column-gap: 12px
+  margin-right: 16px
+  a
+    box-sizing: border-box
+    padding: 4px 8px
+    background-color: var(--enter-btn-bg);
+    color: var(--primary)
+    border-radius: 0 0 8px 8px
+    transition: all 0.25s
+    height: 32px
+    display: flex
+    flex-direction: column-reverse
+    &:hover
+      background-color: var(--enter-btn-hover)
+      // color: #fff
+      height: 48px
+
+// 创意源于 https://github.com/saicaca/fuwari
+.license-block
+  z-index: -2
+  background-color: var(--license-block-bg)
+  border-radius: .75rem
+  padding: 1.25rem 1.5rem
+  position: relative
+  overflow: hidden
+  height: 120px
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  margin: 1rem 0
+  margin-top: 2rem
+  svg
+    z-index: -1
+    position: absolute
+    top: -40px
+    right 1.5rem
+    color: var(--license-icon-color)
+  .license-title
+    display: flex
+    flex-direction: column
+    h4
+      margin: 0
+      margin-bottom: .5rem
+    a
+      max-width: 100%
+      margin-right: auto
+      padding-left: 0
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+  .license-contont
+    display: flex
+    column-gap: 2rem
+    span
+      h6
+        margin: 0
+        margin-bottom: .25rem
+      p
+        margin: 0
+
+@media screen and (max-width: 500px)
+  #wordcount
+    display: none
+  #page-tag
+    display: none
+  :root
+    --root-font-size: 15px
+  .license-block
+    .license-title
+      a
+        font-size: .9rem
+    .license-contont
+      column-gap: 1.5rem
+      span
+        h6
+          font-size: .85rem
+        p
+          font-size: .9rem
+
+@media screen and (max-width: 400px)
+  .license-block
+    .license-title
+      a
+        font-size: .85rem
+    .license-contont
+      column-gap: 1.5rem
+      span
+        h6
+          font-size: .75rem
+        p
+          font-size: .85rem
+
+@media screen and (max-width: 370px)
+  .license-block
+    .license-contont
+      span
+        p
+          font-size: .75rem

@@ -36,7 +36,7 @@
   width: 100%
   position: absolute
   overflow: hidden
-  transition: opacity trans-style, top trans-style
+  transition: opacity t1-style, top t1-style, height t1-style
   top: -40px
   &.hide
     opacity: 0
@@ -160,11 +160,9 @@ $nav-link
   transition: background trans-style, height trans-style
   border-radius: 0 0 card-radius card-radius
   overflow: hidden
-  height: fit-content
+  // height: fit-content
   @media mq-normal
     display: none
-  &.hidden
-    height: 0
   #dropdown-link-list
     padding-top: card-radius + 8px
     padding-bottom: 8px
